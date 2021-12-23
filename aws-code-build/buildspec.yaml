@@ -29,7 +29,7 @@ phases:
 #    on-failure: ABORT | CONTINUE
     commands:
       - ls
-      - mvn install package
+      - mvn clean package
 
     finally:
       - echo "Completed Running all the commands"
@@ -41,3 +41,7 @@ phases:
     finally:
       - echo "Finally completed the build!"
 
+artifacts:
+  files:
+    - target/app-aws.jar
+  discard-paths: yes
