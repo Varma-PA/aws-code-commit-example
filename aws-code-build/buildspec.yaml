@@ -12,8 +12,8 @@ phases:
 #    run-as: aws-ubuntu
 #    on-failure: ABORT | CONTINUE
     commands:
-      - apt update
-      - apt install default-jre
+      - apt update -y
+      - apt install default-jre -y
 #    finally:
 #      - command
 #      - command
