@@ -28,8 +28,9 @@ phases:
 #    run-as: Linux-user-name
 #    on-failure: ABORT | CONTINUE
     commands:
-      - ./mvnw install package
       - ls
+      - ./mvnw install package
+
     finally:
       - echo "Completed Running all the commands"
 
