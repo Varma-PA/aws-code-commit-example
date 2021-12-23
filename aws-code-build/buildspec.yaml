@@ -32,9 +32,11 @@ phases:
     commands:
       - echo "Hello World!!"
       - java --version
-#    finally:
-#      - command
-#      - command
+      - pwd
+      - ls
+    finally:
+      - echo "Completed Running all the commands"
+
 #  post_build:
 #    run-as: Linux-user-name
 #    on-failure: ABORT | CONTINUE
