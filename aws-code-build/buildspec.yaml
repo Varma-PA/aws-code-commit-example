@@ -1,0 +1,46 @@
+version: 0.2
+
+#run-as: aws-ubuntu
+
+
+#proxy:
+#  upload-artifacts: no
+#  logs: yes
+
+phases:
+  install:
+#    run-as: aws-ubuntu
+#    on-failure: ABORT | CONTINUE
+    commands:
+      - apt update
+      - apt install default-jre
+#    finally:
+#      - command
+#      - command
+#  pre_build:
+#    run-as: Linux-user-name
+#    on-failure: ABORT | CONTINUE
+#    commands:
+#      - command
+#      - command
+#    finally:
+#      - command
+#      - command
+  build:
+#    run-as: Linux-user-name
+#    on-failure: ABORT | CONTINUE
+    commands:
+      - echo "Hello World!!"
+      - java --version
+#    finally:
+#      - command
+#      - command
+#  post_build:
+#    run-as: Linux-user-name
+#    on-failure: ABORT | CONTINUE
+#    commands:
+#      - command
+#      - command
+#    finally:
+#      - command
+#      - command
