@@ -17,32 +17,26 @@ phases:
 #    finally:
 #      - command
 #      - command
-#  pre_build:
-#    run-as: Linux-user-name
-#    on-failure: ABORT | CONTINUE
-#    commands:
-#      - command
-#      - command
-#    finally:
-#      - command
-#      - command
+  pre_build:
+    commands:
+      - echo "Pre-Build Stage"
+      - ls
+      - mvnw clean
+    finally:
+      - echo "Completed Pre-Build Stage"
   build:
 #    run-as: Linux-user-name
 #    on-failure: ABORT | CONTINUE
     commands:
-      - echo "Hello World!!"
-      - java --version
-      - pwd
+      - mvnw install package
       - ls
     finally:
       - echo "Completed Running all the commands"
 
-#  post_build:
-#    run-as: Linux-user-name
-#    on-failure: ABORT | CONTINUE
+  post_build:
 #    commands:
 #      - command
 #      - command
-#    finally:
-#      - command
-#      - command
+    finally:
+      - echo "Finally completed the build!"
+
