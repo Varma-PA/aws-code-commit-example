@@ -21,7 +21,7 @@ phases:
     commands:
       - echo "Pre-Build Stage"
       - ls
-      - mvnw clean
+      - mvn clean
     finally:
       - echo "Completed Pre-Build Stage"
   build:
