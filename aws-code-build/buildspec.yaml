@@ -29,7 +29,7 @@ phases:
 #    on-failure: ABORT | CONTINUE
     commands:
       - ls
-      - ./mvnw install package
+      - mvn install package
 
     finally:
       - echo "Completed Running all the commands"
